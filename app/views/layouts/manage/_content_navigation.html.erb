@@ -1,0 +1,17 @@
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+      <h1>
+        <%= controller_name %>
+        <small><%= action_name %></small>
+      </h1>
+      <ol class="breadcrumb">
+        <% breadcrumbs do |links| %>
+          <% if links.any? %>
+            <i class="fa fa-dashboard"></i>
+            <% links.each do |link| %>
+              <li class="active"><%= link_to link.text, link.url, class: (link.current? ? "current" : nil) %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </ol>
+      </section>
