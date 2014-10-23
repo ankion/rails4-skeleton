@@ -1,4 +1,7 @@
 class Admin < ActiveRecord::Base
+  include Gravtastic
+  gravtastic
+
   enum role: [:super_admin, :admin]
   after_initialize :set_default_role, :if => :new_record?
 
