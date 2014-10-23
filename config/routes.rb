@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  as :admin do
-    get 'admins/edit' => 'devise/registrations#edit', :as => 'edit_admin_registration'
-    put 'admins' => 'devise/registrations#update', :as => 'admin_registration'
+  namespace :manage do
+    root 'dashboard#index'
+  end
+
+  devise_for :admins, skip: :registrations
+  devise_scope :admin do
+    resource :registration,
+      only: [:edit, :update],
+      path: 'admins',
+      controller: 'admins/registrations',
+      as: :admin_registration do
+        get :cancel
+      end
   end
   root 'visitors#index'
 end
