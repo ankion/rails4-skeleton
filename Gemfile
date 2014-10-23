@@ -40,6 +40,9 @@ gem 'spring',        group: :development
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
+  gem 'guard'
+  gem 'guard-pow', require: false
+  gem 'guard-livereload', require: false
 end
 
 # Use ActiveModel has_secure_password
