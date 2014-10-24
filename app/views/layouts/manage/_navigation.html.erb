@@ -16,28 +16,16 @@
         <li class="dropdown user user-menu">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
           <i class="glyphicon glyphicon-user"></i>
-          <span><%= current_admin.email %> <i class="caret"></i></span>
+          <span><%= current_admin.name %> <i class="caret"></i></span>
         </a>
         <ul class="dropdown-menu">
           <!-- User image -->
           <li class="user-header bg-light-blue">
           <%= image_tag current_admin.gravatar_url, :class => 'img-circle', :alt => 'User Image' %>
           <p>
-          Jane Doe - Web Developer
-          <small>Member since Nov. 2012</small>
+          <%= current_admin.name %>
+          <small><%= current_admin.email %></small>
           </p>
-          </li>
-          <!-- Menu Body -->
-          <li class="user-body">
-          <div class="col-xs-4 text-center">
-            <a href="#">Followers</a>
-          </div>
-          <div class="col-xs-4 text-center">
-            <a href="#">Sales</a>
-          </div>
-          <div class="col-xs-4 text-center">
-            <a href="#">Friends</a>
-          </div>
           </li>
           <!-- Menu Footer-->
           <li class="user-footer">
