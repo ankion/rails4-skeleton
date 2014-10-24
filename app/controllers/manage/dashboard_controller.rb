@@ -1,7 +1,4 @@
-class Manage::DashboardController < ApplicationController
-  before_action :authenticate_admin!
-  layout 'manage'
-
+class Manage::DashboardController < ManageController
   def index
   end
 end
