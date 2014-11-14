@@ -17,6 +17,10 @@ Gems
 - simple_form
 - gretel
 - gravtastic
+- kaminari
+- carrierwave
+- mini_magick
+- high_voltage
 
 後台 Scaffold 產生器
 ----------

@@ -35,6 +35,10 @@ gem 'simple_form', '~> 3.1.0.rc2'
 # Helper
 gem "gretel"
 gem 'gravtastic'
+gem 'kaminari'
+gem 'carrierwave'
+gem "mini_magick"
+gem 'high_voltage', '~> 2.2.1'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
@@ -42,6 +46,8 @@ gem 'spring',        group: :development
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'guard'
+  gem 'guard-bundler'
+  gem 'guard-rspec'
   gem 'guard-pow', require: false
   gem 'guard-livereload', require: false
 end
@@ -53,7 +59,9 @@ end
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+group :development do
+  gem 'capistrano-rails'
+end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]

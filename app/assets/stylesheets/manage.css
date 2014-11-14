@@ -13,5 +13,6 @@
  *= require 'bootstrap_and_override'
  *= require font-awesome
  *= require 'AdminLTE'
+ *= require 'manage/dashboard'
  *= require_self
  */

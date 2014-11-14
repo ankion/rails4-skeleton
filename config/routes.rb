@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     root 'dashboard#index'
   end
 
-  devise_for :admins, skip: :registrations
+  devise_for :admins, skip: :registrations, :controllers => { :sessions => "admins/sessions" }
   devise_scope :admin do
     resource :registration,
       only: [:edit, :update],

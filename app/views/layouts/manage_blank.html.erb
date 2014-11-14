@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= Rails.application.secrets.app_name %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag    'manage', media: 'all' %>
+    <%= javascript_include_tag 'manage' %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body class="bg-light-blue">
+    <%= yield %>
+  </body>
+</html>
